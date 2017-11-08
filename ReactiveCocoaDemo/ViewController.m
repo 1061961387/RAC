@@ -15,6 +15,7 @@
 #import "HKThread.h"
 #import "Person.h"
 #import "NSObject+KVO.h"
+#import <ReactiveObjC/RACReturnSignal.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -76,7 +77,17 @@
     
 //    [self racMulticastConnection];
     
-    [self racCommand];
+//    [self racCommand];
+    
+//    [self bindSignal];
+    
+//    [self flattenMap];
+    
+//    [self map];
+    
+//    [self signalOfSignal];
+    
+    [self flattenMapSignal];
     
 }
 
@@ -431,18 +442,45 @@
     //创建命令
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         NSLog(@"%@",input);
-        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-            //发送数据
+        RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
             [subscriber sendNext:@"执行完后产生的数据"];
+            
+            //命令执行完了，需要调用sendCompleted
+            //发送完成
+            [subscriber sendCompleted];
             return nil;
         }];
+        NSLog(@"signal = %@",signal);
+        return signal;
     }];
     
     //执行信号
     //信号源，发送信号的信号
-//    command.executionSignals
+//    [command.executionSignals subscribeNext:^(RACSignal * x) {
+//        NSLog(@"1 = %@",x);
+//        [x subscribeNext:^(id  _Nullable x) {
+//            NSLog(@"2 = %@",x);
+//        }];
+//    }];
+    
+    //最新的信号
+//    RACSignal *signalLatest = command.executionSignals.switchToLatest;
+//    NSLog(@"signalLatest = %@",signalLatest);
+//    [signalLatest subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"switchToLatest = %@",x);
+//    }];
+    
+    [command.executing subscribeNext:^(NSNumber * _Nullable x) {
+        if ([x boolValue]) {
+            NSLog(@"正在执行");
+        }else{
+            NSLog(@"执行完毕&&未执行");
+        }
+    }];
+    
     //执行命令
     RACSignal *signal = [command execute:@"执行命令"];
+    NSLog(@"signal 0 = %@",signal);
     
     //订阅信号
     [signal subscribeNext:^(id  _Nullable x) {
@@ -450,8 +488,86 @@
     }];
 }
 
-- (void)s{
+- (void)bindSignal{
+    RACSubject *subject = [RACSubject subject];
+    //将subject信号绑定到bindSignal
+    RACSignal *bindSignal = [subject bind:^RACSignalBindBlock _Nonnull{
+        //只要源信号发送数据，就会调用bindBlock
+        //作用：字典转模型  中间步骤可以处理数据
+        //value源信号发送的内容
+        return ^RACSignal * (id _Nullable value, BOOL *stop){
+            NSString *ret = [NSString stringWithFormat:@"%@%@",value,value];
+            //返回信号不能传nil
+            return [RACReturnSignal return:ret];
+        };
+    }];
     
+    //订阅信号
+    //bindSignal接收到subject发送的信号
+    [bindSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"订阅%@",x);
+    }];
+    
+    //通过subject发送信号
+    [subject sendNext:@"发送bind信号"];
+}
+
+- (void)flattenMap
+{
+    RACSubject *subject = [RACSubject subject];
+    
+    [[subject flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
+        return [RACReturnSignal return:value];
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    
+    [subject sendNext:@"123"];
+}
+
+- (void)map{
+    RACSubject *subject = [RACSubject subject];
+    [[subject map:^id _Nullable(id  _Nullable value) {
+        return value;
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"456"];
+}
+
+- (void)signalOfSignal
+{
+    RACSubject *signalOfSignal = [RACSubject subject];
+    RACSubject *signal = [RACSubject subject];
+    
+//    [signalOfSignal subscribeNext:^(id  _Nullable x) {
+//        [x subscribeNext:^(id  _Nullable x) {
+//            NSLog(@"%@",x);
+//        }];
+//    }];
+    
+    [signalOfSignal.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [signalOfSignal sendNext:signal];
+    [signal sendNext:@"1234"];
+}
+
+- (void)flattenMapSignal
+{
+    RACSubject *signalOfSignal = [RACSubject subject];
+    RACSubject *subject = [RACSubject subject];
+    [[signalOfSignal flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
+        return value;
+    }] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [signalOfSignal sendNext:subject];
+    [subject sendNext:@"12345"];
 }
 
 - (void)didReceiveMemoryWarning {
