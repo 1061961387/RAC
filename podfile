@@ -1,0 +1,7 @@
+target "ReactiveCocoaDemo" do
+
+use_frameworks!
+
+pod 'ReactiveObjC'
+
+end
