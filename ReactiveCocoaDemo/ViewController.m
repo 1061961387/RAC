@@ -74,7 +74,9 @@
     
 //    [self racTuplePack];
     
-    [self racMulticastConnection];
+//    [self racMulticastConnection];
+    
+    [self racCommand];
     
 }
 
@@ -422,6 +424,34 @@
     
     //连接
     [connection connect];
+}
+
+- (void)racCommand
+{
+    //创建命令
+    RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        NSLog(@"%@",input);
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            //发送数据
+            [subscriber sendNext:@"执行完后产生的数据"];
+            return nil;
+        }];
+    }];
+    
+    //执行信号
+    //信号源，发送信号的信号
+//    command.executionSignals
+    //执行命令
+    RACSignal *signal = [command execute:@"执行命令"];
+    
+    //订阅信号
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+- (void)s{
+    
 }
 
 - (void)didReceiveMemoryWarning {
