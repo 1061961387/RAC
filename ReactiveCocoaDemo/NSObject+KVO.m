@@ -19,8 +19,13 @@
     Class newClass = objc_allocateClassPair([self class], newName.UTF8String, 0);
     //2、注册子类
     objc_registerClassPair(newClass);
+    NSLog(@"1 = %@",self.self.self.self.self);
+    NSLog(@"2 = %@",newClass);
     //3、改变方法调用者的类型为子类
     object_setClass(self, newClass);
+    
+    NSLog(@"3 = %@",self);
+    NSLog(@"4 = %@",newClass.self);
     //4、重写父类方法
     class_addMethod([self class], @selector(setName:), (IMP)setName, "");
     //5、绑定属性
@@ -32,12 +37,14 @@ void setName(id self,SEL _cmd,NSString *newName){
     id class = [self class];
     //2、获得观察者
     NSLog(@"self = %@",[self class]);
+    NSLog(@"5 = %@",self);
     id observer = objc_getAssociatedObject(self, @"wn");
     NSLog(@"observer = %@",observer);
     //3、改变方法调用者的类型为父类
     object_setClass(self, class_getSuperclass([self class]));
     
     NSLog(@"self1 = %@",[self class]);
+    NSLog(@"6 = %@",self);
     id observer1 = objc_getAssociatedObject(self, @"wn");
     NSLog(@"observer1 = %@",observer1);
     //4、调用父类set方法

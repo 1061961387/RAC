@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet HKView *hkView;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (weak, nonatomic) IBOutlet UITextField *tf;
+@property (weak, nonatomic) IBOutlet UITextField *pwdTF;
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (strong, nonatomic) HKThread *thread;
 @property (assign, nonatomic) BOOL finished;
 
@@ -32,6 +34,8 @@
 @end
 
 @implementation ViewController
+- (IBAction)loginEvent:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -87,8 +91,27 @@
     
 //    [self signalOfSignal];
     
-    [self flattenMapSignal];
+//    [self flattenMapSignal];
     
+//    [self concat];
+    
+//    [self then];
+    
+//    [self merge];
+    
+//    [self zipWith];
+    
+//    [self combineLatest];
+    
+//    [self filter];
+    
+//    [self ignore];
+    
+//    [self take];
+    
+//    [self distinctUntilChanged];
+    
+    [self skip];
 }
 
 - (void)caculator
@@ -568,6 +591,211 @@
     
     [signalOfSignal sendNext:subject];
     [subject sendNext:@"12345"];
+}
+
+#pragma mark 组合
+
+- (void)concat{
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"A"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSignal *signalB = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"B"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSignal *signalC = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        [subscriber sendNext:@"C"];
+        return nil;
+    }];
+    
+    //concat按顺序组合
+    //创建组合信号
+//    RACSignal *concatSignal = [[signalA concat:signalB] concat:signalC];
+    
+    ///<NSFastEnumeration>
+    RACSignal *concatSignal = [RACSignal concat:@[signalA,signalB,signalC]];
+    //订阅组合信号
+    [concatSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+- (void)then{
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"发送请求A");
+        [subscriber sendNext:@"A"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    RACSignal *signalB = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSLog(@"发送请求B");
+        [subscriber sendNext:@"B"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    //then当A发送完毕，忽略A所有值，发送B
+    RACSignal *thenSignal = [signalA then:^RACSignal * _Nonnull{
+        return signalB;
+    }];
+    
+    [thenSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+- (void)merge{
+    //来一个处理一个
+    RACSubject *subjectA = [RACSubject subject];
+    RACSubject *subjectB = [RACSubject subject];
+    RACSubject *subjectC = [RACSubject subject];
+
+//    RACSignal *mergeSignal = [[subjectA merge:subjectB] merge:subjectC];
+    RACSignal *mergeSignal = [RACSignal merge:@[subjectA,subjectB,subjectC]];
+    
+    //根据情况发送数据
+    [mergeSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subjectA sendNext:@"A"];
+    [subjectB sendNext:@"B"];
+    [subjectC sendNext:@"C"];
+}
+
+- (void)zipWith
+{
+    //两个信号压缩！只有当两个信号同时发出信号内容，并且将内容合并成为一个元祖给你
+    
+    RACSubject *subjectA = [RACSubject subject];
+    RACSubject *subjectB = [RACSubject subject];
+    
+    RACSignal *zipSignal = [subjectA zipWith:subjectB];
+    
+    //接收数据和发送顺序无关，只和压缩顺序有关
+    [zipSignal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subjectA sendNext:@"A"];
+    [subjectB sendNext:@"B"];
+    [subjectA sendNext:@"A1"];
+    [subjectB sendNext:@"B1"];
+    [subjectA sendNext:@"A2"];
+    [subjectB sendNext:@"B2"];
+}
+
+#pragma mark 组合运用
+
+- (void)combineLatest
+{
+    //reduceBlock 参数：根据组合的信号关联的  必须一一对应。
+    RACSignal *signal = [RACSignal combineLatest:@[_tf.rac_textSignal,_pwdTF.rac_textSignal] reduce:^id _Nullable (NSString *account, NSString *pwd){
+        NSLog(@"account = %@ -- pwd = %@",account,pwd);
+        return @(account.length && pwd.length);
+    }];
+    
+//    [signal subscribeNext:^(id  _Nullable x) {
+//        _loginBtn.enabled = [x boolValue];
+//    }];
+    
+    RAC(_loginBtn, enabled) = signal;
+}
+
+#pragma mark 过滤
+
+- (void)filter
+{
+    [[_tf.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+        NSLog(@"value = %@",value);
+        return value.length > 5;
+    }] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+}
+
+#pragma mark 忽略
+- (void)ignore{
+    RACSubject *subject = [RACSubject subject];
+    
+    //忽略所有值
+//    [subject ignoreValues];
+    [[[subject ignore:@"1"] ignore:@"3"] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1"];
+    [subject sendNext:@"3"];
+    [subject sendNext:@"123"];
+    [subject sendNext:@"13"];
+}
+
+- (void)take{
+    RACSubject *subject = [RACSubject subject];
+    //专门做一个标记信号
+    RACSubject *tagSubject = [RACSubject subject];
+    //指定拿前面的哪几个数据，从前往后
+//    [[subject take:2] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    //指定拿后的哪几个数据，从后往前(一定要写结束)
+//    [[subject takeLast:3] subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+    
+    //直到标记信号发送数据结束
+    [[subject takeUntil:tagSubject] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1"];
+    [tagSubject sendNext:@".."];//或 [tagSubject sendCompleted];
+    [subject sendNext:@"2"];
+    [subject sendNext:@"3"];
+    [subject sendNext:@"4"];
+    [subject sendCompleted];
+}
+
+- (void)distinctUntilChanged{
+    //忽略掉重复信号
+    RACSubject *subject = [RACSubject subject];
+    
+    [[subject distinctUntilChanged] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1"];
+    [subject sendNext:@"1"];
+    [subject sendNext:@"1"];
+    [subject sendNext:@"2"];
+    [subject sendNext:@"1"];
+    [subject sendNext:@"2"];
+}
+
+- (void)skip
+{
+    RACSubject *subject = [RACSubject subject];
+    
+    //跳过前几个信号
+    [[subject skip:2] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@",x);
+    }];
+    
+    [subject sendNext:@"1"];
+    [subject sendNext:@"2"];
+    [subject sendNext:@"3"];
+    [subject sendNext:@"4"];
+}
+
+#pragma mark 登录练习
+
+- (void)loginingWithRAC
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
