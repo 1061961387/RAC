@@ -25,6 +25,7 @@
 		84A535FD1F25D518009290CE /* ReactiveCocoaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A535FC1F25D518009290CE /* ReactiveCocoaDemoTests.m */; };
 		84A536081F25D518009290CE /* ReactiveCocoaDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A536071F25D518009290CE /* ReactiveCocoaDemoUITests.m */; };
 		84A536171F25D633009290CE /* Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A536161F25D633009290CE /* Caculator.m */; };
+		B216A27F1FB48C6600D6318A /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B216A27E1FB48C6600D6318A /* LoginViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		84A536161F25D633009290CE /* Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caculator.m; sourceTree = "<group>"; };
 		93C05F8129BA617CBFE6EC1B /* Pods_ReactiveCocoaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E0821FDD792E04C4E20D0C /* Pods-ReactiveCocoaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B216A27D1FB48C6600D6318A /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		B216A27E1FB48C6600D6318A /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 				844F2DD81FB29557002431EA /* Person.m */,
 				844F2DDA1FB2B479002431EA /* NSObject+WNKeyValueObserving.h */,
 				844F2DDB1FB2B479002431EA /* NSObject+WNKeyValueObserving.m */,
+				B216A27D1FB48C6600D6318A /* LoginViewModel.h */,
+				B216A27E1FB48C6600D6318A /* LoginViewModel.m */,
 			);
 			path = ReactiveCocoaDemo;
 			sourceTree = "<group>";
@@ -398,6 +403,7 @@
 			files = (
 				844D99EA1FB1B0FA008CA0AA /* SecondViewController.m in Sources */,
 				844D99E31FB160FB008CA0AA /* HKThread.m in Sources */,
+				B216A27F1FB48C6600D6318A /* LoginViewModel.m in Sources */,
 				844F2DDC1FB2B479002431EA /* NSObject+WNKeyValueObserving.m in Sources */,
 				844F2DD91FB29557002431EA /* Person.m in Sources */,
 				844F2DD61FB294B9002431EA /* NSObject+KVO.m in Sources */,

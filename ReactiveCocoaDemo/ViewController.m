@@ -16,6 +16,7 @@
 #import "Person.h"
 #import "NSObject+KVO.h"
 #import <ReactiveObjC/RACReturnSignal.h>
+#import "LoginViewModel.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -30,6 +31,8 @@
 @property (strong, nonatomic) Person *p;
 
 @property (strong, nonatomic)id<RACSubscriber>  _Nonnull subscriber;
+
+@property (strong, nonatomic) LoginViewModel *loginVM;
 
 @end
 
@@ -87,7 +90,7 @@
     
 //    [self flattenMap];
     
-//    [self map];
+    [self map];
     
 //    [self signalOfSignal];
     
@@ -111,7 +114,11 @@
     
 //    [self distinctUntilChanged];
     
-    [self skip];
+//    [self skip];
+    
+//    [self loginingWithRAC];
+    
+//    [self mvvm];
 }
 
 - (void)caculator
@@ -552,6 +559,7 @@
 - (void)map{
     RACSubject *subject = [RACSubject subject];
     [[subject map:^id _Nullable(id  _Nullable value) {
+        NSLog(@"value = %@",value);
         return value;
     }] subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
@@ -795,7 +803,60 @@
 
 - (void)loginingWithRAC
 {
+    RACSignal *loginSignal = [RACSignal combineLatest:@[_tf.rac_textSignal,_pwdTF.rac_textSignal] reduce:^id _Nullable(NSString *account, NSString *pwd){
+        return @(account.length && pwd.length);
+    }];
+
+    RAC(_loginBtn, enabled) = loginSignal;
     
+    //创建命令
+    RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        NSLog(@"拿到%@",input);
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            [subscriber sendNext:@"发送用户数据"];
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }];
+    
+    //获取命令中的信号源
+    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"获取信号 %@",x);
+    }];
+    
+    //监听命令
+    //设置菊花
+    [[command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+        if ([x boolValue]) {
+            NSLog(@"加载菊花");
+        }else{
+            NSLog(@"干掉菊花");
+        }
+    }];
+    
+    //登录
+    [[_loginBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [command execute:@"帐号密码"];
+    }];
+}
+
+- (LoginViewModel *)loginVM
+{
+    if (!_loginVM) {
+        _loginVM = [[LoginViewModel alloc] init];
+    }
+    return _loginVM;
+}
+
+- (void)mvvm{
+    RAC(self.loginVM, account) = _tf.rac_textSignal;
+    RAC(self.loginVM, pwd) = _pwdTF.rac_textSignal;
+    RAC(self.loginBtn, enabled) = self.loginVM.loginSignal;
+    
+    [[_loginBtn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        [self.loginVM.loginCommand execute:@"zhanghaomima"];
+        [self.loginVM.loginCommand execute:nil];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
