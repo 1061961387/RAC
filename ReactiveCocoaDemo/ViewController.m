@@ -17,6 +17,7 @@
 #import "NSObject+KVO.h"
 #import <ReactiveObjC/RACReturnSignal.h>
 #import "LoginViewModel.h"
+#import <pthread.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -90,7 +91,7 @@
     
 //    [self flattenMap];
     
-    [self map];
+//    [self map];
     
 //    [self signalOfSignal];
     
@@ -119,6 +120,8 @@
 //    [self loginingWithRAC];
     
 //    [self mvvm];
+    
+    [self threadDemo];
 }
 
 - (void)caculator
@@ -386,6 +389,8 @@
     _hkView.frame = CGRectMake(x, 50, 200, 200);
     
     _p.name = [NSString stringWithFormat:@"name%d",x];
+    
+    [self pthread];
 }
 
 - (void)liftSelector
@@ -644,7 +649,7 @@
         [subscriber sendCompleted];
         return nil;
     }];
-    
+
     //then当A发送完毕，忽略A所有值，发送B
     RACSignal *thenSignal = [signalA then:^RACSignal * _Nonnull{
         return signalB;
@@ -857,6 +862,60 @@
 //        [self.loginVM.loginCommand execute:@"zhanghaomima"];
         [self.loginVM.loginCommand execute:nil];
     }];
+}
+
+#pragma mark pthread
+
+- (void)pthread
+{
+    NSString *str = @"hello";
+    
+    pthread_t threadId;
+    int result = pthread_create(&threadId, NULL, &demo, (__bridge void *)(str));
+    
+    if (result == 0) {
+        NSLog(@"ok");
+    }else{
+        NSLog(@"error");
+    }
+}
+
+void *demo (void *para){
+    NSLog(@"%@ = %@",para,[NSThread currentThread]);
+    return nil;
+}
+
+#pragma mark NSThread
+- (void)threadDemo{
+    [[_btn rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [self creatThread];
+    }];
+}
+
+- (void)creatThread{
+    //创建线程
+    NSLog(@"A----");
+//    NSThread *thread = [[NSThread alloc] initWithTarget:self selector:@selector(threadMethod:) object:@"thread"];
+//    //启动线程
+//    [thread start];
+    
+    //分离
+//    [NSThread detachNewThreadSelector:@selector(threadMethod:) toTarget:self withObject:@"detach"];
+    
+    //后台，子线程
+    [self performSelectorInBackground:@selector(threadMethod:) withObject:@"background"];
+    
+    for (int i=0; i<10; i++) {
+        NSLog(@"%d",i);
+    }
+    NSLog(@"B----");
+}
+
+- (void)threadMethod:(id)obj
+{
+    for (int i=0; i<2; i++) {
+        NSLog(@"%d %@ == %@",i,obj,[NSThread currentThread]);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
