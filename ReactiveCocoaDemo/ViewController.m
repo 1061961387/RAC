@@ -121,7 +121,19 @@
     
 //    [self mvvm];
     
-    [self threadDemo];
+//    [self threadDemo];
+    
+//    [self gcdSync];
+    
+//    [self gcdAsync];
+    
+//    [self serialSync];
+    
+//    [self serialAsync];
+    
+    [self concurrentsync];
+    
+//    [self concurrentAsync];
 }
 
 - (void)caculator
@@ -918,10 +930,77 @@ void *demo (void *para){
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark GCD
+- (void)gcdSync
+{
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_sync(queue, ^{
+        NSLog(@"同步执行%@",[NSThread currentThread]);
+    });
 }
 
+- (void)gcdAsync
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"异步执行%@",[NSThread currentThread]);
+    });
+}
+
+//串行队列，同步执行
+//顺序执行,不会开启线程 在主线程
+- (void)serialSync
+{
+    //1.队列名称
+    //2.队列属性
+    dispatch_queue_t queqe = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_SERIAL);
+    for (int i=0; i<10; i++) {
+        dispatch_sync(queqe, ^{
+            NSLog(@"%@ %d",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"come here = %@",[NSThread currentThread]);
+}
+
+//串行队列，异步执行
+//顺序执行,会开启线程  在子线程
+- (void)serialAsync
+{
+    //1.队列名称
+    //2.队列属性
+    dispatch_queue_t queqe = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_SERIAL);
+    for (int i=0; i<10; i++) {
+        NSLog(@"--------%d",i);
+        dispatch_async(queqe, ^{
+            NSLog(@"%@ %d",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"come here = %@",[NSThread currentThread]);
+}
+
+//并发队列，同步执行
+//顺序执行,不会开启线程  在主线程
+- (void)concurrentsync{
+    dispatch_queue_t queqe = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_CONCURRENT);
+    for (int i=0; i<10; i++) {
+        NSLog(@"--------%d",i);
+        dispatch_sync(queqe, ^{
+            NSLog(@"%@ %d",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"come here = %@",[NSThread currentThread]);
+}
+
+//并发队列，异步执行
+//不一定顺序执行,会开启线程  在子线程
+- (void)concurrentAsync{
+    dispatch_queue_t queqe = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_CONCURRENT);
+    for (int i=0; i<10; i++) {
+        NSLog(@"--------%d",i);
+        dispatch_async(queqe, ^{
+            NSLog(@"%@ %d",[NSThread currentThread],i);
+        });
+    }
+    NSLog(@"come here = %@",[NSThread currentThread]);
+}
 
 @end
