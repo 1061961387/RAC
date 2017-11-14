@@ -131,9 +131,13 @@
     
 //    [self serialAsync];
     
-    [self concurrentsync];
+//    [self concurrentsync];
     
 //    [self concurrentAsync];
+    
+//    [self gcdDemo1];
+    
+    [self gcdDemo2];
 }
 
 - (void)caculator
@@ -1001,6 +1005,46 @@ void *demo (void *para){
         });
     }
     NSLog(@"come here = %@",[NSThread currentThread]);
+}
+
+- (void)gcdDemo1
+{
+    dispatch_queue_t q = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_sync(q, ^{
+        NSLog(@"登录 = %@",[NSThread currentThread]);
+    });
+    dispatch_async(q, ^{
+        NSLog(@"支付 = %@",[NSThread currentThread]);
+    });
+    NSLog(@"1");
+    dispatch_async(q, ^{
+        NSLog(@"下载 = %@",[NSThread currentThread]);
+    });
+    NSLog(@"2");
+    NSLog(@"come here");
+}
+
+//增强同步
+- (void)gcdDemo2
+{
+    dispatch_queue_t q = dispatch_queue_create("com.ios.wn", DISPATCH_QUEUE_CONCURRENT);
+    void (^task)() = ^{
+        dispatch_sync(q, ^{
+            NSLog(@"登录 = %@",[NSThread currentThread]);
+        });
+        dispatch_async(q, ^{
+            NSLog(@"支付 = %@",[NSThread currentThread]);
+        });
+        NSLog(@"1");
+        dispatch_async(q, ^{
+            NSLog(@"下载 = %@",[NSThread currentThread]);
+        });
+        NSLog(@"come here");
+        
+    };
+    
+    dispatch_async(q, task);
 }
 
 @end
