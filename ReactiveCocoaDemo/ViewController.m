@@ -488,7 +488,7 @@
 {
     //创建命令
     RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-        NSLog(@"%@",input);
+        NSLog(@"input = %@",input);
         RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
             [subscriber sendNext:@"执行完后产生的数据"];
             
