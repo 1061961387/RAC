@@ -137,7 +137,7 @@
     
 //    [self gcdDemo1];
     
-    [self gcdDemo2];
+//    [self gcdDemo2];
 }
 
 - (void)caculator

@@ -9,5 +9,7 @@
 #import "ViewController.h"
 
 @interface SecondViewController : ViewController
+@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (weak, nonatomic) IBOutlet UITableView *mTableView;
 
 @end
