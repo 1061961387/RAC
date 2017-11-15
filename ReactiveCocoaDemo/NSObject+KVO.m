@@ -17,7 +17,7 @@
     NSString *oldName = NSStringFromClass([self class]);
     NSString *newName = [NSString stringWithFormat:@"WNKVO_%@",oldName];
     Class newClass = objc_allocateClassPair([self class], newName.UTF8String, 0);
-    //2、注册子类
+    //2、注册子类  不能注册已有的类
     objc_registerClassPair(newClass);
     NSLog(@"1 = %@",self.self.self.self.self);
     NSLog(@"2 = %@",newClass);
