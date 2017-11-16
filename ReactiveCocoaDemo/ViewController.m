@@ -91,7 +91,7 @@
     
 //    [self flattenMap];
     
-//    [self map];
+    [self map];
     
 //    [self signalOfSignal];
     
@@ -580,8 +580,9 @@
 - (void)map{
     RACSubject *subject = [RACSubject subject];
     [[subject map:^id _Nullable(id  _Nullable value) {
+        //修改值
         NSLog(@"value = %@",value);
-        return value;
+        return [NSString stringWithFormat:@"12%@",value];
     }] subscribeNext:^(id  _Nullable x) {
         NSLog(@"%@",x);
     }];
