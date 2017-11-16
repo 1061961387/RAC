@@ -91,7 +91,7 @@
     
 //    [self flattenMap];
     
-    [self map];
+//    [self map];
     
 //    [self signalOfSignal];
     
@@ -138,6 +138,10 @@
 //    [self gcdDemo1];
     
 //    [self gcdDemo2];
+    
+//    [self gcdLock];
+    
+//    [self gcdUnlock];
 }
 
 - (void)caculator
@@ -1046,6 +1050,28 @@ void *demo (void *para){
     };
     
     dispatch_async(q, task);
+}
+
+- (void)gcdLock
+{
+    dispatch_queue_t q = dispatch_get_main_queue();
+    dispatch_sync(q, ^{
+        NSLog(@"%@",[NSThread currentThread]);
+    });
+//    NSLog(@"come here");
+}
+
+- (void)gcdUnlock
+{
+    void (^task)() = ^{
+        dispatch_queue_t q = dispatch_get_main_queue();
+        dispatch_sync(q, ^{
+            NSLog(@"%@",[NSThread currentThread]);
+        });
+        NSLog(@"come here");
+    };
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), task);
 }
 
 @end
