@@ -220,7 +220,7 @@ typedef void(^runloopBlock)(void);
     runloopObserver = CFRunLoopObserverCreate(nil, kCFRunLoopBeforeWaiting, YES, 0, &callBack, &context);
     
     //添加到runloop
-    CFRunLoopAddObserver(runloop, runloopObserver, kCFRunLoopDefaultMode);
+    CFRunLoopAddObserver(runloop, runloopObserver, kCFRunLoopCommonModes);
     
     //释放
     CFRelease(runloopObserver);
