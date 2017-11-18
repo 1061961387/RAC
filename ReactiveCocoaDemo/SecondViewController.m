@@ -221,6 +221,9 @@ typedef void(^runloopBlock)(void);
     
     //添加到runloop
     CFRunLoopAddObserver(runloop, runloopObserver, kCFRunLoopDefaultMode);
+    
+    //释放
+    CFRelease(runloopObserver);
 }
 
 static void callBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){

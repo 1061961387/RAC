@@ -18,6 +18,7 @@
 #import <ReactiveObjC/RACReturnSignal.h>
 #import "LoginViewModel.h"
 #import <pthread.h>
+#import "ThirdViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -35,10 +36,16 @@
 
 @property (strong, nonatomic) LoginViewModel *loginVM;
 
+@property (strong, nonatomic) dispatch_source_t timer;
+
 @end
 
 @implementation ViewController
 - (IBAction)loginEvent:(id)sender {
+}
+- (IBAction)thridVC:(id)sender {
+    ThirdViewController *vc = [[ThirdViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
@@ -142,6 +149,8 @@
 //    [self gcdLock];
     
 //    [self gcdUnlock];
+    
+//    [self gcdTimer];
 }
 
 - (void)caculator
@@ -1072,6 +1081,18 @@ void *demo (void *para){
     };
     
     dispatch_async(dispatch_get_global_queue(0, 0), task);
+}
+
+- (void)gcdTimer
+{
+    //source0 用户处理事件
+    //source1 系统内核事件
+    _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(0, 0));
+    dispatch_source_set_timer(_timer, DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
+    dispatch_source_set_event_handler(_timer, ^{
+        NSLog(@"%@",[NSThread currentThread]);
+    });
+    dispatch_resume(_timer);
 }
 
 @end

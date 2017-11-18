@@ -1,3 +1,8 @@
+platform :ios, '8.0'
+
+pod "RMPickerViewController"
+pod "RMDateSelectionViewController"
+
 target "ReactiveCocoaDemo" do
 
 use_frameworks!

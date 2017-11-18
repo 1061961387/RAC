@@ -25,6 +25,7 @@
 		84A535FD1F25D518009290CE /* ReactiveCocoaDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A535FC1F25D518009290CE /* ReactiveCocoaDemoTests.m */; };
 		84A536081F25D518009290CE /* ReactiveCocoaDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A536071F25D518009290CE /* ReactiveCocoaDemoUITests.m */; };
 		84A536171F25D633009290CE /* Caculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A536161F25D633009290CE /* Caculator.m */; };
+		B21622D41FBFEE7000876975 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21622D31FBFEE7000876975 /* ThirdViewController.m */; };
 		B216A27F1FB48C6600D6318A /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B216A27E1FB48C6600D6318A /* LoginViewModel.m */; };
 		B219EF161FBC5442006D9343 /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B219EF151FBC5442006D9343 /* ContainerViewController.m */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,8 @@
 		84A536161F25D633009290CE /* Caculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Caculator.m; sourceTree = "<group>"; };
 		93C05F8129BA617CBFE6EC1B /* Pods_ReactiveCocoaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E0821FDD792E04C4E20D0C /* Pods-ReactiveCocoaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B21622D21FBFEE7000876975 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		B21622D31FBFEE7000876975 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		B216A27D1FB48C6600D6318A /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		B216A27E1FB48C6600D6318A /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		B219EF141FBC5442006D9343 /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				B216A27E1FB48C6600D6318A /* LoginViewModel.m */,
 				B219EF141FBC5442006D9343 /* ContainerViewController.h */,
 				B219EF151FBC5442006D9343 /* ContainerViewController.m */,
+				B21622D21FBFEE7000876975 /* ThirdViewController.h */,
+				B21622D31FBFEE7000876975 /* ThirdViewController.m */,
 			);
 			path = ReactiveCocoaDemo;
 			sourceTree = "<group>";
@@ -375,9 +380,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RMActionController/RMActionController.framework",
+				"${BUILT_PRODUCTS_DIR}/RMDateSelectionViewController/RMDateSelectionViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/RMPickerViewController/RMPickerViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMActionController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMDateSelectionViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RMPickerViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -390,13 +404,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReactiveCocoaDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -417,6 +434,7 @@
 				84A536171F25D633009290CE /* Caculator.m in Sources */,
 				84A535EA1F25D518009290CE /* ViewController.m in Sources */,
 				844DB1B41F4FB66600ACA94A /* BlockTest.m in Sources */,
+				B21622D41FBFEE7000876975 /* ThirdViewController.m in Sources */,
 				84A535E71F25D518009290CE /* AppDelegate.m in Sources */,
 				84A535E41F25D518009290CE /* main.m in Sources */,
 				843E183C1FB04130003C977B /* HKView.m in Sources */,
