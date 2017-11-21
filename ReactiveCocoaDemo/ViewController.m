@@ -19,6 +19,8 @@
 #import "LoginViewModel.h"
 #import <pthread.h>
 #import "ThirdViewController.h"
+#import <SSKeychain/SSKeychain.h>
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
@@ -151,6 +153,10 @@
 //    [self gcdUnlock];
     
 //    [self gcdTimer];
+    
+//    [self savePwd:@"654321" forAccount:@"latteDemo"];
+    
+    [self laContext];
 }
 
 - (void)caculator
@@ -1093,6 +1099,40 @@ void *demo (void *para){
         NSLog(@"%@",[NSThread currentThread]);
     });
     dispatch_resume(_timer);
+}
+
+#pragma mark SSKeyChain
+- (void)savePwd:(NSString *)pwd forAccount:(NSString *)account
+{
+    //钥匙串采用AES加密
+    BOOL result = [SSKeychain setPassword:pwd forService:@"com.yufu.ReactiveCocoaDemo" account:account];
+    
+    if (result) {
+        [self loadPwdForAccount:account];
+    }
+}
+
+- (void)loadPwdForAccount:(NSString *)account
+{
+    NSString *pwd = [SSKeychain passwordForService:@"com.yufu.ReactiveCocoaDemo" account:account];
+    NSLog(@"pwd = %@",pwd);
+}
+
+#pragma mark 指纹识别
+- (void)laContext{
+    LAContext *laContext = [[LAContext alloc] init];
+    
+    if ([laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:NULL]) {
+        NSLog(@"支持");
+        [laContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"指纹支付" reply:^(BOOL success, NSError * _Nullable error) {
+            NSLog(@"%d == %@",success,error);
+            
+            NSDictionary *dict = error.userInfo;
+        }];
+        
+    }else{
+        NSLog(@"不支持");
+    }
 }
 
 @end

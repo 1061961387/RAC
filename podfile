@@ -2,6 +2,8 @@ platform :ios, '8.0'
 
 pod "RMPickerViewController"
 pod "RMDateSelectionViewController"
+pod 'SSKeychain'
+pod 'SDWebImage'
 
 target "ReactiveCocoaDemo" do
 

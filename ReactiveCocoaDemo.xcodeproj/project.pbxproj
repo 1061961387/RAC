@@ -68,6 +68,7 @@
 		844F2DDB1FB2B479002431EA /* NSObject+WNKeyValueObserving.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WNKeyValueObserving.m"; sourceTree = "<group>"; };
 		845872131FC3F97100988C77 /* NSString Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString Hash.h"; path = "Encrypt/NSString Hash.h"; sourceTree = "<group>"; };
 		845872141FC3F97100988C77 /* NSString Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString Hash.m"; path = "Encrypt/NSString Hash.m"; sourceTree = "<group>"; };
+		845872161FC4016000988C77 /* ReactiveCocoaDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReactiveCocoaDemo.entitlements; sourceTree = "<group>"; };
 		84A535DF1F25D518009290CE /* ReactiveCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A535E31F25D518009290CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84A535E51F25D518009290CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		84A535E11F25D518009290CE /* ReactiveCocoaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				845872161FC4016000988C77 /* ReactiveCocoaDemo.entitlements */,
 				8458720D1FC3F7C000988C77 /* Encrypt */,
 				84A536151F25D633009290CE /* Caculator.h */,
 				84A536161F25D633009290CE /* Caculator.m */,
@@ -309,6 +311,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 3APPCQ9WAH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					84A535F71F25D518009290CE = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -601,6 +608,7 @@
 			baseConfigurationReference = 98E0821FDD792E04C4E20D0C /* Pods-ReactiveCocoaDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReactiveCocoaDemo/ReactiveCocoaDemo.entitlements;
 				DEVELOPMENT_TEAM = 3APPCQ9WAH;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = ReactiveCocoaDemo/Info.plist;
@@ -616,6 +624,7 @@
 			baseConfigurationReference = 67FEF39A503137089D5645FE /* Pods-ReactiveCocoaDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReactiveCocoaDemo/ReactiveCocoaDemo.entitlements;
 				DEVELOPMENT_TEAM = 3APPCQ9WAH;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = ReactiveCocoaDemo/Info.plist;
