@@ -17,6 +17,7 @@
 		079B79528879324C5F6E30A7B25B54DE /* ReactiveObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = E0D7A9F72DCB6EB9E23C2005B190F207 /* ReactiveObjC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0823DB51408CDFBF9F2B2E5D4F893286 /* RACQueueScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 35FBDCE447BA376F4261F1FECB6EFAAF /* RACQueueScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		084A16513891F7028EF4D06BCFF6C797 /* RMActionControllerTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 3672363A3FFD454B188148198AD941D5 /* RMActionControllerTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		098835EEE4CD58D45563AAD7BD69EC8D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5D6961FE0BD7A7AB6E6F1CBC9A38938 /* QuartzCore.framework */; };
 		098C6BC1CA6955D43A2DB336485C2375 /* RACBlockTrampoline.m in Sources */ = {isa = PBXBuildFile; fileRef = 519945708B84E6B2923BE151DBEFC22D /* RACBlockTrampoline.m */; };
 		0B27C364752694AB24ACA223682BF280 /* UISwitch+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B2B3A22D9A8565F2A09638AAEE7F1B93 /* UISwitch+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0BA8FD9CACDE1BAED84B04686B8E55BF /* NSObject+RACKVOWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EC0CB5D994C6C4774CCD5843613361 /* NSObject+RACKVOWrapper.m */; };
@@ -24,9 +25,9 @@
 		0E377F887AAB9935B93E67C2C4292C6B /* RACValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF3520F5C29DDE196E0F6B9275E9C4EF /* RACValueTransformer.m */; };
 		0E6B192E5C0A09A7755DAF388C3582D1 /* RMActionController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA261F4EDC535908B7C57B7E40761423 /* RMActionController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0EB6F07FA44C016AF10086FCC9FB35DD /* UISegmentedControl+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 18214A30E2C1398C62342C749C10F9FB /* UISegmentedControl+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EE66B52EDB84FDEDC953FFD73CA054E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A785FB558EB8C2813607FEEF52BB53F /* CoreGraphics.framework */; };
 		0F0949C6744389F2189E8ACFD7330A89 /* RACUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9456E98D23983DD90597AD32CFB1C475 /* RACUnit.m */; };
 		0F3AFC7A8EC27573A96240F661425E66 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 401F9992C94CB4ADB6F3839CCC3097E3 /* RACEXTRuntimeExtensions.m */; };
+		0F670280E776022A0C5CD72AD867C5E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */; };
 		0F983BC5D63B38DE2FF724D7113888EB /* RMDateSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E195CE21455865A1B4B4829BB7595D3A /* RMDateSelectionViewController.m */; };
 		107A985B876C2BE1A53366CA4606A422 /* RACScheduler+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D4CCA4E0B31FD1E60F7387902562D21 /* RACScheduler+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10E306BCB4C4D7992A1BE46B0C2E4C75 /* UIAlertView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B50B2BC4BE6EBC376A2EDE7AFAC1C0 /* UIAlertView+RACSignalSupport.m */; };
@@ -71,7 +72,9 @@
 		3E8DA8E36BE24E3FF946FC6F3CFC54E9 /* NSString+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C1C59C1209373DA2971BDE1D644803 /* NSString+RACSupport.m */; };
 		3FB92519FA1EF0940C259756434B6FDF /* UIDatePicker+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C1D3331CBF44EA1385EFCE38DEA935C5 /* UIDatePicker+RACSignalSupport.m */; };
 		4096125C64CC6AACB4891283EE946306 /* UIButton+RACCommandSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BEC4B409185B73E481CB575910FF59 /* UIButton+RACCommandSupport.m */; };
+		40E353961F18D5F61D94975A7D16DDEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */; };
 		412304940C9B16BB47E519C7AFB52689 /* RMAction+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BABF3D1D3188AE3F2000B5AA47047F /* RMAction+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		43AA22F161D6DA2AFBA8611FD3CF0AC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0501622F3317D99C5871DD8E071E9618 /* CoreGraphics.framework */; };
 		4406C4BDE2A5FEDECC4E537957D4B1F1 /* RACTuple.m in Sources */ = {isa = PBXBuildFile; fileRef = D537AA4F7A5420393DE29FF8591AC43A /* RACTuple.m */; };
 		4457BB8345B1BF35325F02F2FE44F8EA /* NSData+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 697360A59377EA48214EEE17950BAA96 /* NSData+RACSupport.m */; };
 		46D8BB455CAFF714A2562178C6D51B4A /* RACBlockTrampoline.h in Headers */ = {isa = PBXBuildFile; fileRef = E8F7193A9A4F4D6842F31EBC31C06A5F /* RACBlockTrampoline.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -80,7 +83,6 @@
 		4847AEF848E5E9B9D3F1F5A5D1FF6220 /* UIButton+RACCommandSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 176362E10B1E345A3EE4B2C0E198B912 /* UIButton+RACCommandSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		487D79CEA9AB983053807282D43A0A11 /* RACImmediateScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 59DC67BDBA9939928B0A2EDF34EBB41E /* RACImmediateScheduler.m */; };
 		4AE9DAA29358F317A094CD2E38F6D30D /* RACTestScheduler.h in Headers */ = {isa = PBXBuildFile; fileRef = 980984A275098450A4B7899E11A92E56 /* RACTestScheduler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BBC280B303F13AC4EEC14407BCBF8CA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8744EB2FB48CC97B64D4A12CD14809EF /* QuartzCore.framework */; };
 		4C25804CB5A9B7EA5405FDE8F35243A4 /* RACSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = CA318249E0DA2A1445FC41261DB9B4B8 /* RACSequence.m */; };
 		4C2ED8AF2FD6F492FEEF25A9315234F5 /* RACStringSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = A9720B4EBD928AC55F8A81492147191E /* RACStringSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CE32183DE705EB6B9C1C968F3F9990F /* NSString+RACSequenceAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4BB23CB8D6C4D6699F8624C905BE88F /* NSString+RACSequenceAdditions.m */; };
@@ -92,9 +94,9 @@
 		53503D5C90D371421620F79184470948 /* RACCompoundDisposableProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = A57B8D5DD06037BDADFD4CCE586C0E7F /* RACCompoundDisposableProvider.d */; };
 		53B88E0ACCF65F2AAA554853800A29A5 /* RACSerialDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = CE720BD261C3F9F52DEDE1857693C76B /* RACSerialDisposable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54C964F15A5E8126A875713124546E74 /* NSSet+RACSequenceAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1B2D7F6C8ECF629447C3E5C7B8D501 /* NSSet+RACSequenceAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		55437A2926AA8C41C816EE3F15FEF92E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */; };
 		55D50DF3C2FE2547B57FBB97E92CA3F1 /* RACStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A5595CD8110A0E202D797A32148CF6 /* RACStream.m */; };
 		55FE48E7C3E40E1BBCF50EB547D2DFEF /* RACEXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = F3271218A6814E3F5843FA19C6CA8F2B /* RACEXTKeyPathCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56A15D3981024267FEBFB24C4BA80138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */; };
 		57673447913727D37DB658B73D6BCD61 /* RACSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = F28A81682A3A1AA62425DBC351664309 /* RACSignal.m */; };
 		5B60E8FEC2BB375F2E98658D799F2336 /* RACSignalSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = CDA54C864E9B302E2E0E642C390DC099 /* RACSignalSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B897BF123539F464C7219FAB2DDB3C9 /* RACStream+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0F1DFD7C46A734843AC53F58FBC8B6 /* RACStream+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -128,7 +130,6 @@
 		7BAC0D59AD1DF84D13FAA3C3579B68EB /* NSObject+RACLifting.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA2DFB3CAFB2FD8186578B300B31140 /* NSObject+RACLifting.m */; };
 		7E92E54928497F58DEC5829F7CE1555D /* RMDateSelectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E65A4F49F07D3E4CC28BEC88B9B0BA8 /* RMDateSelectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EE7512DEC192DB1F8F2BA5384BBB48F /* RACKVOChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 461C5B44208E1FAD5DF0AED99A3E2110 /* RACKVOChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7EF3EBF4C34E57E0950D511611DEF5F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */; };
 		7EF60B1936226DD59A7519D03812FF9B /* RACStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ECB65AEED5421032CDF2B791508D69D /* RACStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F894DD7DA72C8DC8805FF3E7C3734FB /* RACKVOProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = F030256994169758AF4A6B7EEC688F67 /* RACKVOProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FDDBD3171D5893B09C4C7E2742C70B5 /* RACDynamicSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 447EC5DCE2AF45AF40A0A666E72F2A25 /* RACDynamicSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -141,7 +142,6 @@
 		8961D4885E511E10472EE3D0C9BD16EF /* NSObject+RACSelectorSignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 772ACD74CE38E5A8281257D5AED2D022 /* NSObject+RACSelectorSignal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8EC9CFE942425E49682577E0DC126FD2 /* RACCompoundDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = F38D990CD9A56EB960C9615F92710526 /* RACCompoundDisposable.m */; };
 		8ED33825C86DD908BBD64C3B226842B3 /* RACBehaviorSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = BF3003026BE3A7003E25738191C53147 /* RACBehaviorSubject.m */; };
-		8ED92F6E67626A2684D0DE8F32039C9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */; };
 		90259694E8BDF9AF0DA663A22F883736 /* RACChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 828D6F0E7DFDC199F5152DEB26328EB8 /* RACChannel.m */; };
 		903D5878853DCE8AC1BE4269768BBB28 /* UIView+RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2329ABDD8E20E6C008E37AFEF0573559 /* UIView+RMActionController.m */; };
 		91650D1E8D28FB5918BF5CEF499C930B /* NSString+RACKeyPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB862CB24174D61AB96741646A6BAA6 /* NSString+RACKeyPathUtilities.m */; };
@@ -152,6 +152,7 @@
 		94F6016BE901E0C91B331BC633BB3FF9 /* UITextField+RACSignalSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EDB27BFB3B46E09F8D5A1E4910A0C14 /* UITextField+RACSignalSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		965666843BFD483236BC2B964D3BA94B /* RACDisposable.h in Headers */ = {isa = PBXBuildFile; fileRef = E3A1D5856F862F8D33E9B0AEBF986705 /* RACDisposable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97D4ECC4A43F1A52BCA09880E93715C7 /* RMAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A802A9A01D8FAEE38BBE39E685F38E /* RMAction.m */; };
+		996E75928631812604CCFB29234967B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */; };
 		9DB31AFC496F1B504C01FA943AD5AC92 /* RMActionController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFE159A4379DFE4A711F812C232D992 /* RMActionController-dummy.m */; };
 		9E6375CCA9E490F82646490FCE919E2A /* RACEmptySignal.h in Headers */ = {isa = PBXBuildFile; fileRef = 490BB4EEC089AB95D4A89DB7C4DD9B0B /* RACEmptySignal.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		9F5CCDE69D8D0137152CBB9455C68781 /* RACScopedDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AE11156BA5347CAEF36F8BDF01446A8 /* RACScopedDisposable.m */; };
@@ -166,7 +167,6 @@
 		AA86ABFD47056A1D7745E910DDFF60D0 /* RACDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 97C25CE58D989CE7A17A1DEB8F04C5B8 /* RACDelegateProxy.m */; };
 		AD530921CC00591A5CB1A479DA28E08C /* NSURLConnection+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = A28CC78791B70CC1689ECC57551B3C64 /* NSURLConnection+RACSupport.m */; };
 		ADD5CEE5CB8B71AAFF8347732A9D482D /* RACSerialDisposable.m in Sources */ = {isa = PBXBuildFile; fileRef = 72771EF26FC6BDC63BB34C7C9975A92D /* RACSerialDisposable.m */; };
-		AEDA35366378210CE9EDCF29FC6E5B53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */; };
 		AF7B2070B3F54DF9F64BD7D3F1FF34B6 /* RACSignalProvider.d in Sources */ = {isa = PBXBuildFile; fileRef = F16645A4A1CCD9FD67D109451CA7D4F6 /* RACSignalProvider.d */; };
 		AFF9600A2B5DBB2264D6401025303E73 /* UITableViewHeaderFooterView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = D57526EC51A4D5825EFFD2C8FBF7E6A7 /* UITableViewHeaderFooterView+RACSignalSupport.m */; };
 		B25A606B290AD662A39838318ED8A8B0 /* NSProcessInfo+RMActionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E333B836C13ACE99C7C2EBAAE6E8E84 /* NSProcessInfo+RMActionController.m */; };
@@ -193,6 +193,7 @@
 		D1AC13BF2DD39C653E98C23B55A861AA /* RACChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E25887A83CFE228D3221816A5EB9A78 /* RACChannel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D25EC472DBC5298DEF5E412522B7DCAE /* RACScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C64E3EDA452349C22864F159D48AF /* RACScheduler.m */; };
 		D2C4D4E1576FE5729DD4A2579E6F3323 /* RACAnnotations.h in Headers */ = {isa = PBXBuildFile; fileRef = 50208A46ADE207F1202A4678AF9D93E0 /* RACAnnotations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3628BF00AA9C9B77979A81685ADB7C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */; };
 		D593C4BE8E9B6827C3C95F1E37C96B4A /* RACErrorSignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9860B1082A1A37E1CA006828E6CA566F /* RACErrorSignal.m */; };
 		D84085D56F9BA8273A156E7D29DFCE4B /* UIControl+RACSignalSupportPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 275D839709F98C72484451E6C330FCBD /* UIControl+RACSignalSupportPrivate.m */; };
 		D85F1FD69771A63EA17E6680CC009456 /* RACSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = E12E269DF1DD3943EEEF501635BD11F8 /* RACSubscriber.m */; };
@@ -219,7 +220,6 @@
 		EF88F50AA4192F348F410D6E53D5635F /* RACmetamacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CE12C6066154873EBE96CAED2CFCD1 /* RACmetamacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F03D47337CF1189145967181F14A6648 /* RACSubscriptionScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DABD4BBEA55EECE3DE801F3106EBB19 /* RACSubscriptionScheduler.m */; };
 		F1443F34F2AB4A184F251F39C238FF09 /* RACEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 663E229CB02F03D2BF08D7EE30087A22 /* RACEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1BEA23E196C78EA0E23117505188898 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */; };
 		F25EE9FD5C437650B94184E311330BAE /* RACMulticastConnection+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E115804EEC11A3CC98E07C5C92799D2 /* RACMulticastConnection+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		F3C664C47A187FEA8AA36EADAE508D49 /* RMAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 6213A1BF4F528693DA6315E63A821BD9 /* RMAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F45E1E170B714D6FDF4615FDF8824FB1 /* UIStepper+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1C7FB01D1BEB12951292301B4B77B9 /* UIStepper+RACSignalSupport.m */; };
@@ -286,6 +286,7 @@
 
 /* Begin PBXFileReference section */
 		0377424C7548ABE488A3F3DFFE6186B5 /* ReactiveObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReactiveObjC-dummy.m"; sourceTree = "<group>"; };
+		0501622F3317D99C5871DD8E071E9618 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		05B113634EFF0430C1829DCA9DD67AAC /* Pods-ReactiveCocoaDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ReactiveCocoaDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		05CB5237AB8BEBE90EF5F09B370595E8 /* ReactiveObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReactiveObjC-umbrella.h"; sourceTree = "<group>"; };
 		05ECB4C24879E1185050A9EA4E245FFA /* NSData+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+RACSupport.h"; path = "ReactiveObjC/NSData+RACSupport.h"; sourceTree = "<group>"; };
@@ -327,7 +328,6 @@
 		2CFE159A4379DFE4A711F812C232D992 /* RMActionController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RMActionController-dummy.m"; sourceTree = "<group>"; };
 		2ECB65AEED5421032CDF2B791508D69D /* RACStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACStream.h; path = ReactiveObjC/RACStream.h; sourceTree = "<group>"; };
 		2F8C5F3B1D41096AF0EEF6894C518A66 /* NSEnumerator+RACSequenceAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSEnumerator+RACSequenceAdditions.h"; path = "ReactiveObjC/NSEnumerator+RACSequenceAdditions.h"; sourceTree = "<group>"; };
-		2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2FE1258767297442C928DC0979167A81 /* UIGestureRecognizer+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIGestureRecognizer+RACSignalSupport.h"; path = "ReactiveObjC/UIGestureRecognizer+RACSignalSupport.h"; sourceTree = "<group>"; };
 		30D411EBFBFF2D3F34BD005BC950E069 /* RMActionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RMActionController.m; path = RMActionController/RMActionController.m; sourceTree = "<group>"; };
 		313E80AC6AEBDB5B29CC026CF60E3AA3 /* NSURLConnection+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+RACSupport.h"; path = "ReactiveObjC/NSURLConnection+RACSupport.h"; sourceTree = "<group>"; };
@@ -425,7 +425,6 @@
 		846F2C8B226DA0D9C9DB6B83F70A5694 /* NSUserDefaults+RACSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+RACSupport.h"; path = "ReactiveObjC/NSUserDefaults+RACSupport.h"; sourceTree = "<group>"; };
 		8536EE46F56173D1C8C72CEA438A9876 /* RACEagerSequence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACEagerSequence.h; path = ReactiveObjC/RACEagerSequence.h; sourceTree = "<group>"; };
 		85D5DEB124ADFBE9D606C695F4803C78 /* RMActionController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMActionController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8744EB2FB48CC97B64D4A12CD14809EF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		87880D5F4B047CE61B17E7C6AAC0B725 /* RACImmediateScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACImmediateScheduler.h; path = ReactiveObjC/RACImmediateScheduler.h; sourceTree = "<group>"; };
 		88094348CACA66AD299D0DEDE4972C42 /* Pods-ReactiveCocoaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ReactiveCocoaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		88570BB1F2AA8FFA1305B130342293ED /* RACSubscriptionScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACSubscriptionScheduler.h; path = ReactiveObjC/RACSubscriptionScheduler.h; sourceTree = "<group>"; };
@@ -447,7 +446,6 @@
 		980984A275098450A4B7899E11A92E56 /* RACTestScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTestScheduler.h; path = ReactiveObjC/RACTestScheduler.h; sourceTree = "<group>"; };
 		9860B1082A1A37E1CA006828E6CA566F /* RACErrorSignal.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACErrorSignal.m; path = ReactiveObjC/RACErrorSignal.m; sourceTree = "<group>"; };
 		98DCB03B71942A84C8E5BA6AB7C56AA3 /* UIActionSheet+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+RACSignalSupport.m"; path = "ReactiveObjC/UIActionSheet+RACSignalSupport.m"; sourceTree = "<group>"; };
-		9A785FB558EB8C2813607FEEF52BB53F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		9AA03D50F4C3E4805623ADE24E7F3B8F /* RACReplaySubject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACReplaySubject.m; path = ReactiveObjC/RACReplaySubject.m; sourceTree = "<group>"; };
 		9AB4EF063D25768AD68CDBB1603BF130 /* RMGroupedAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RMGroupedAction.h; path = "RMActionController/Grouping Actions/RMGroupedAction.h"; sourceTree = "<group>"; };
 		9D21C2CA842CA052FA72CDAEBA53E716 /* RACTargetQueueScheduler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RACTargetQueueScheduler.h; path = ReactiveObjC/RACTargetQueueScheduler.h; sourceTree = "<group>"; };
@@ -459,6 +457,7 @@
 		A3048A112575B70F3B57EABC49DB225F /* UIImagePickerController+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImagePickerController+RACSignalSupport.h"; path = "ReactiveObjC/UIImagePickerController+RACSignalSupport.h"; sourceTree = "<group>"; };
 		A4BB23CB8D6C4D6699F8624C905BE88F /* NSString+RACSequenceAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RACSequenceAdditions.m"; path = "ReactiveObjC/NSString+RACSequenceAdditions.m"; sourceTree = "<group>"; };
 		A57B8D5DD06037BDADFD4CCE586C0E7F /* RACCompoundDisposableProvider.d */ = {isa = PBXFileReference; includeInIndex = 1; name = RACCompoundDisposableProvider.d; path = ReactiveObjC/RACCompoundDisposableProvider.d; sourceTree = "<group>"; };
+		A5D6961FE0BD7A7AB6E6F1CBC9A38938 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		A6022B1B924D6EFBB7CE7F31CF5B5429 /* NSObject+RACPropertySubscribing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+RACPropertySubscribing.m"; path = "ReactiveObjC/NSObject+RACPropertySubscribing.m"; sourceTree = "<group>"; };
 		A67A3E05E9B7928660C9BF8481D340D0 /* UISlider+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISlider+RACSignalSupport.h"; path = "ReactiveObjC/UISlider+RACSignalSupport.h"; sourceTree = "<group>"; };
 		A909E22CBD8C8784936E8776C2D84C5F /* RACSignalSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSignalSequence.m; path = ReactiveObjC/RACSignalSequence.m; sourceTree = "<group>"; };
@@ -485,6 +484,7 @@
 		C0C1C59C1209373DA2971BDE1D644803 /* NSString+RACSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RACSupport.m"; path = "ReactiveObjC/NSString+RACSupport.m"; sourceTree = "<group>"; };
 		C1D3331CBF44EA1385EFCE38DEA935C5 /* UIDatePicker+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDatePicker+RACSignalSupport.m"; path = "ReactiveObjC/UIDatePicker+RACSignalSupport.m"; sourceTree = "<group>"; };
 		C1DD309EAEDA2B19A6B64079BFB486A2 /* UICollectionReusableView+RACSignalSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UICollectionReusableView+RACSignalSupport.h"; path = "ReactiveObjC/UICollectionReusableView+RACSignalSupport.h"; sourceTree = "<group>"; };
+		C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C9CB98F68119AE3CDE1C67CF02F8E8FE /* UIImagePickerController+RACSignalSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImagePickerController+RACSignalSupport.m"; path = "ReactiveObjC/UIImagePickerController+RACSignalSupport.m"; sourceTree = "<group>"; };
 		CA318249E0DA2A1445FC41261DB9B4B8 /* RACSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACSequence.m; path = ReactiveObjC/RACSequence.m; sourceTree = "<group>"; };
 		CB77DF2F032337F65C21CAAD25D0BE38 /* RACDynamicSequence.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RACDynamicSequence.m; path = ReactiveObjC/RACDynamicSequence.m; sourceTree = "<group>"; };
@@ -547,7 +547,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1BEA23E196C78EA0E23117505188898 /* Foundation.framework in Frameworks */,
+				0F670280E776022A0C5CD72AD867C5E6 /* Foundation.framework in Frameworks */,
 				81648B815BB89010DFC10FEB51F0E312 /* RMActionController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,9 +556,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EE66B52EDB84FDEDC953FFD73CA054E /* CoreGraphics.framework in Frameworks */,
-				56A15D3981024267FEBFB24C4BA80138 /* Foundation.framework in Frameworks */,
-				4BBC280B303F13AC4EEC14407BCBF8CA /* QuartzCore.framework in Frameworks */,
+				43AA22F161D6DA2AFBA8611FD3CF0AC0 /* CoreGraphics.framework in Frameworks */,
+				996E75928631812604CCFB29234967B8 /* Foundation.framework in Frameworks */,
+				098835EEE4CD58D45563AAD7BD69EC8D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +566,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ED92F6E67626A2684D0DE8F32039C9E /* Foundation.framework in Frameworks */,
+				55437A2926AA8C41C816EE3F15FEF92E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +574,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF3EBF4C34E57E0950D511611DEF5F5 /* Foundation.framework in Frameworks */,
+				D3628BF00AA9C9B77979A81685ADB7C1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,7 +582,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEDA35366378210CE9EDCF29FC6E5B53 /* Foundation.framework in Frameworks */,
+				40E353961F18D5F61D94975A7D16DDEE /* Foundation.framework in Frameworks */,
 				6820F5E51EDDE662E7EDDCE8F23ECD6F /* RMActionController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,6 +905,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		5D961B57E5315609AE560F5B84F65BF2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				0501622F3317D99C5871DD8E071E9618 /* CoreGraphics.framework */,
+				C4A2CFF2E2EF23A98F596764018829C5 /* Foundation.framework */,
+				A5D6961FE0BD7A7AB6E6F1CBC9A38938 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
@@ -931,7 +941,7 @@
 			isa = PBXGroup;
 			children = (
 				85D5DEB124ADFBE9D606C695F4803C78 /* RMActionController.framework */,
-				B86DF9F599D8D202320337C1BE83C015 /* iOS */,
+				5D961B57E5315609AE560F5B84F65BF2 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -960,16 +970,6 @@
 				E494F8598AB30661663E8518B188A5D8 /* RMPickerViewController.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B86DF9F599D8D202320337C1BE83C015 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				9A785FB558EB8C2813607FEEF52BB53F /* CoreGraphics.framework */,
-				2FA2A843C1A386BCA06B3D617B6D2482 /* Foundation.framework */,
-				8744EB2FB48CC97B64D4A12CD14809EF /* QuartzCore.framework */,
-			);
-			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1226,7 +1226,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -1433,409 +1433,329 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A93D43E4C652E0D1C69FB379296DC46 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B69B71C777942BE986A836745104E59 /* RMDateSelectionViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMDateSelectionViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController.modulemap";
-				PRODUCT_NAME = RMDateSelectionViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		13D41169B560F067BE9FCA99A7BE5232 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DEE82245E0696BF6E7D1C13726210FF /* RMActionController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMActionController/RMActionController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMActionController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMActionController/RMActionController.modulemap";
-				PRODUCT_NAME = RMActionController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2BE3CE8DAE594E01C55A9F063DDF3A81 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 895953CBE41A186F0C71720D3D961F07 /* Pods-ReactiveCocoaDemo.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_ReactiveCocoaDemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		764D40C2B81A11F52F6015700B6E72BF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F5AD20A1D56B438DBF7ADB568FBB38B /* RMPickerViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMPickerViewController/RMPickerViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMPickerViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMPickerViewController/RMPickerViewController.modulemap";
-				PRODUCT_NAME = RMPickerViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		84C2C585546FAF2670C300B3F1588EAE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DEE82245E0696BF6E7D1C13726210FF /* RMActionController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMActionController/RMActionController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMActionController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMActionController/RMActionController.modulemap";
-				PRODUCT_NAME = RMActionController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		BD5ABCD4503C9F7BEB68A70BCF8B550B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F5AD20A1D56B438DBF7ADB568FBB38B /* RMPickerViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMPickerViewController/RMPickerViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMPickerViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMPickerViewController/RMPickerViewController.modulemap";
-				PRODUCT_NAME = RMPickerViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BDCFDCA7A84C549F86EB8D3C1CA66498 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EF89C826F56A2CA0B047E8022CDF680 /* ReactiveObjC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ReactiveObjC/ReactiveObjC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReactiveObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ReactiveObjC/ReactiveObjC.modulemap";
-				PRODUCT_NAME = ReactiveObjC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C9A0321641B02C3198C2A93E07D71683 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B69B71C777942BE986A836745104E59 /* RMDateSelectionViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RMDateSelectionViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController.modulemap";
-				PRODUCT_NAME = RMDateSelectionViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DAA768DB4A33ECAE3F87549AFEA84BCA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EF89C826F56A2CA0B047E8022CDF680 /* ReactiveObjC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ReactiveObjC/ReactiveObjC-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ReactiveObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ReactiveObjC/ReactiveObjC.modulemap";
-				PRODUCT_NAME = ReactiveObjC;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		ECFD84F2D3E6D067457C6EDE6762BD3A /* Debug */ = {
+		2E8CBF9624104BC2003990480ED62A06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88094348CACA66AD299D0DEDE4972C42 /* Pods-ReactiveCocoaDemo.debug.xcconfig */;
+			baseConfigurationReference = 1DEE82245E0696BF6E7D1C13726210FF /* RMActionController.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMActionController/RMActionController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMActionController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMActionController/RMActionController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RMActionController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3E0830619453BE2CFD335B2A2BA898C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DEE82245E0696BF6E7D1C13726210FF /* RMActionController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMActionController/RMActionController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMActionController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMActionController/RMActionController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RMActionController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		51A1DE08DD3ACBEA112D152C0443C049 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5AD20A1D56B438DBF7ADB568FBB38B /* RMPickerViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMPickerViewController/RMPickerViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMPickerViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMPickerViewController/RMPickerViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RMPickerViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9CAAB3130EB4319C655C2E44545F42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B69B71C777942BE986A836745104E59 /* RMDateSelectionViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMDateSelectionViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = RMDateSelectionViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF23A4F69BC99187E3F366B470066D40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF89C826F56A2CA0B047E8022CDF680 /* ReactiveObjC.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReactiveObjC/ReactiveObjC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReactiveObjC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReactiveObjC/ReactiveObjC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ReactiveObjC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C60FE56D8FDEA16839DF1A31F8F91322 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F5AD20A1D56B438DBF7ADB568FBB38B /* RMPickerViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMPickerViewController/RMPickerViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMPickerViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMPickerViewController/RMPickerViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RMPickerViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CA9D9FE0314FE2AB51247F4E429FB623 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EF89C826F56A2CA0B047E8022CDF680 /* ReactiveObjC.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ReactiveObjC/ReactiveObjC-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReactiveObjC/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ReactiveObjC/ReactiveObjC.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ReactiveObjC;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3F3B4962A9EC2F19140034234B35978 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88094348CACA66AD299D0DEDE4972C42 /* Pods-ReactiveCocoaDemo.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1848,6 +1768,72 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		F9A0BC66BBE3A6596C17987C94827880 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 895953CBE41A186F0C71720D3D961F07 /* Pods-ReactiveCocoaDemo.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ReactiveCocoaDemo/Pods-ReactiveCocoaDemo.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ReactiveCocoaDemo;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FD057EE3CBDE4CDF6F4ADF85A5E0C92F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B69B71C777942BE986A836745104E59 /* RMDateSelectionViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RMDateSelectionViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RMDateSelectionViewController/RMDateSelectionViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RMDateSelectionViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1855,8 +1841,8 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
-				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1864,8 +1850,8 @@
 		4BD554A29D3511F048A60D10B59AA422 /* Build configuration list for PBXNativeTarget "RMActionController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				13D41169B560F067BE9FCA99A7BE5232 /* Debug */,
-				84C2C585546FAF2670C300B3F1588EAE /* Release */,
+				3E0830619453BE2CFD335B2A2BA898C6 /* Debug */,
+				2E8CBF9624104BC2003990480ED62A06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1873,8 +1859,8 @@
 		83F0E15ED1634AC9860CBDA1F8463CF2 /* Build configuration list for PBXNativeTarget "RMDateSelectionViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9A0321641B02C3198C2A93E07D71683 /* Debug */,
-				0A93D43E4C652E0D1C69FB379296DC46 /* Release */,
+				B9CAAB3130EB4319C655C2E44545F42A /* Debug */,
+				FD057EE3CBDE4CDF6F4ADF85A5E0C92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1882,8 +1868,8 @@
 		966FDDE35BFB9F8535DB032762398519 /* Build configuration list for PBXNativeTarget "RMPickerViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD5ABCD4503C9F7BEB68A70BCF8B550B /* Debug */,
-				764D40C2B81A11F52F6015700B6E72BF /* Release */,
+				51A1DE08DD3ACBEA112D152C0443C049 /* Debug */,
+				C60FE56D8FDEA16839DF1A31F8F91322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1891,8 +1877,8 @@
 		BC03FA36946AE2BB808442683E2321F8 /* Build configuration list for PBXNativeTarget "ReactiveObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BDCFDCA7A84C549F86EB8D3C1CA66498 /* Debug */,
-				DAA768DB4A33ECAE3F87549AFEA84BCA /* Release */,
+				BF23A4F69BC99187E3F366B470066D40 /* Debug */,
+				CA9D9FE0314FE2AB51247F4E429FB623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1900,8 +1886,8 @@
 		BC62DBBB79D0CC941C83AC8330ADE1FB /* Build configuration list for PBXNativeTarget "Pods-ReactiveCocoaDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECFD84F2D3E6D067457C6EDE6762BD3A /* Debug */,
-				2BE3CE8DAE594E01C55A9F063DDF3A81 /* Release */,
+				F3F3B4962A9EC2F19140034234B35978 /* Debug */,
+				F9A0BC66BBE3A6596C17987C94827880 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

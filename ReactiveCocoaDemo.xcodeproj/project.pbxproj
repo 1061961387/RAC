@@ -16,6 +16,7 @@
 		844F2DD61FB294B9002431EA /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F2DD51FB294B9002431EA /* NSObject+KVO.m */; };
 		844F2DD91FB29557002431EA /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F2DD81FB29557002431EA /* Person.m */; };
 		844F2DDC1FB2B479002431EA /* NSObject+WNKeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = 844F2DDB1FB2B479002431EA /* NSObject+WNKeyValueObserving.m */; };
+		845872151FC3F97100988C77 /* NSString Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 845872141FC3F97100988C77 /* NSString Hash.m */; };
 		84A535E41F25D518009290CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A535E31F25D518009290CE /* main.m */; };
 		84A535E71F25D518009290CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A535E61F25D518009290CE /* AppDelegate.m */; };
 		84A535EA1F25D518009290CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A535E91F25D518009290CE /* ViewController.m */; };
@@ -65,6 +66,8 @@
 		844F2DD81FB29557002431EA /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		844F2DDA1FB2B479002431EA /* NSObject+WNKeyValueObserving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+WNKeyValueObserving.h"; sourceTree = "<group>"; };
 		844F2DDB1FB2B479002431EA /* NSObject+WNKeyValueObserving.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WNKeyValueObserving.m"; sourceTree = "<group>"; };
+		845872131FC3F97100988C77 /* NSString Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString Hash.h"; path = "Encrypt/NSString Hash.h"; sourceTree = "<group>"; };
+		845872141FC3F97100988C77 /* NSString Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString Hash.m"; path = "Encrypt/NSString Hash.m"; sourceTree = "<group>"; };
 		84A535DF1F25D518009290CE /* ReactiveCocoaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveCocoaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A535E31F25D518009290CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84A535E51F25D518009290CE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +131,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8458720D1FC3F7C000988C77 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				845872131FC3F97100988C77 /* NSString Hash.h */,
+				845872141FC3F97100988C77 /* NSString Hash.m */,
+			);
+			name = Encrypt;
+			sourceTree = "<group>";
+		};
 		84A535D61F25D518009290CE = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +167,7 @@
 		84A535E11F25D518009290CE /* ReactiveCocoaDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8458720D1FC3F7C000988C77 /* Encrypt */,
 				84A536151F25D633009290CE /* Caculator.h */,
 				84A536161F25D633009290CE /* Caculator.m */,
 				84A535E51F25D518009290CE /* AppDelegate.h */,
@@ -413,7 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -429,6 +442,7 @@
 				B216A27F1FB48C6600D6318A /* LoginViewModel.m in Sources */,
 				844F2DDC1FB2B479002431EA /* NSObject+WNKeyValueObserving.m in Sources */,
 				844F2DD91FB29557002431EA /* Person.m in Sources */,
+				845872151FC3F97100988C77 /* NSString Hash.m in Sources */,
 				844F2DD61FB294B9002431EA /* NSObject+KVO.m in Sources */,
 				843E183F1FB04E5D003C977B /* KFC.m in Sources */,
 				84A536171F25D633009290CE /* Caculator.m in Sources */,
